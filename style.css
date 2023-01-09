@@ -1,0 +1,132 @@
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    position: relative;
+    background-color: #000;
+    cursor: url('asset`s/iamges/cursor.svg') , auto;
+}
+.mainNav{
+    position: sticky;
+    top: 0;
+    right: 0;
+    width: 100%;
+    background-color: #0f0d1d;
+    z-index: 11;
+}
+/* burger menu */
+.burger{
+position: relative;
+display: block;
+width: 1.5rem;
+/* height: 1.5rem; */
+background-color: #fff;
+margin-right: 1rem;
+appearance: none;
+background: none;
+border: none;
+outline: none;
+cursor: pointer;
+}
+.burger .bar , .burger::after , .burger::before{
+content:  "";
+display: block;
+width: 100%;
+height: 3px;
+margin: 6px 0;
+background-color: #fff;
+transition: ease-in-out .3s;
+
+}
+.burger.is-active::before{
+    transform: rotate(-45deg) translate( -9px , 6px);
+}
+.burger.is-active .bar{
+    opacity: 0;
+}
+.burger.is-active::after{
+    transform: rotate(45deg) translate(-6.5px , -4px);
+}
+
+/* mobile-nav start */
+.mobile-nav{
+    position: fixed;
+    top: 100%;
+    left: 0%;
+    width: 100%;
+    min-width: 100vh;
+    display: block;
+    z-index: 98;
+    background-color: rgba(32, 32, 32, 0.712);
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    transition: ease-in-out .3s;
+}
+.mobile-nav.is-active{
+    top: 10%;
+}
+.mobile-nav a{
+    display: block;
+    text-align: center;
+    color: #fff;
+    text-decoration: none;
+    margin-top: 1rem;
+    margin: 10px auto;
+    max-width: 10rem;
+    padding: .5rem;
+}
+.mobile-nav a:hover{
+    background-color: #24104f;
+}
+/* mobile-nav end  */
+.sec  a{ 
+    margin: 0 2rem;
+}
+.main-text{
+    position: absolute;
+    top: 12rem;
+    left: 23rem;
+    letter-spacing: 1rem;
+    font-size: 1.5rem;
+    font-family: 'Moon Dance', cursive;
+    font-weight: 600;
+}
+.aks{
+    background-size: cover;
+    background-attachment: scroll;
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 70vh;
+    width: 100vw;
+    margin: auto;
+    position: relative;
+    opacity: 0.7;
+}
+
+/* main section */
+.searchBox{
+    outline: none;
+    border: none;
+}
+.searchBox:focus{
+    outline-color: blue;
+}
+
+
+
+
+/* ==================== media queries =========================== */
+
+@media only screen and (min-width : 580px ) {
+    .main-text{
+        display: none;
+    }
+    .sec{
+        display: none;
+    }
+}
