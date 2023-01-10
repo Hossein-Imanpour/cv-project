@@ -10,19 +10,19 @@
 </head>
 <body>
         <nav class="navbar bg-black  text-center mainNav ">
-            <a href="index.html" class="ms-4 fs-5 nav-link text-secondary p-2 text-decoration-line-through">Digimovies</a>
+            <a href="index.html" class="ms-4 fs-5 nav-link text-secondary p-2  link-warning">Digimovies</a>
             <section class=" d-flex sec ">
                 <a href="index.html" class=" nav-link text-secondary link-info d-md-none d-xxl-flex d-xl-flex d-lg-flex d-sm-none">Home</a>
                 <a href="#" class=" nav-link text-secondary link-info d-md-none d-xxl-flex d-xl-flex d-lg-flex d-sm-none">Contact</a>
                 <a href="#" class=" nav-link text-secondary link-info d-md-none d-xxl-flex d-xl-flex d-lg-flex d-sm-none">About Us</a>
             </section>
             <a class="btn bg-primary text-white me-4 link-dark d-md-flex d-xxl-flex d-xl-flex d-lg-flex d-sm-none">Sign Up</a>
-            <button class="burger  d-lg-none d-xl-none d-xxl-none d-md-none d-sm-block">
+            <button class="burger  d-lg-none d-xl-none d-xxl-none d-md-none d-sm-block z-3">
                 <div class="bar"></div>
             </button>
         </nav>
         <!-- mobile nav  -->
-        <nav class="mobile-nav ">
+        <nav class="mobile-nav d-xxl-none d-xl-none d-lg-none d-md-none ">
             <a href="#" >Home</a>
             <a href="#" >Contact</a>
             <a href="#" >About Us</a>
@@ -34,21 +34,37 @@
             <img src="asset`s/iamges/page-header.jpg" alt="nav-image" class="aks">
             <section class="container z-1">
                 <form action="#" class="d-flex justify-content-center">
-                    <input type="text" name="text" class="searchBox input-group-text me-5 w-50" placeholder="Search Here ...">
+                    <input type="text" name="text" class="searchBox input-group-text me-2 w-50" placeholder="Search Here ...">
                     <input type="button" value="submit" class="btn bg-primary text-white link-dark ">
                 </form>
             </section>
             <!-- ============================================== -->
 
-            <section class="card-section h-75 bg-body-secondary card-group">
+            <p class="recent">Recent Episodes</p>
+            <section class=" card-section bg-body-secondary card-group container p-4">
+
+                    <div class="cards bg-danger ">
+                        <p class="card-text">title</p>
+                    </div>
+                    <div class="cards bg-danger ">
+                        <p class="card-text">title</p>
+                    </div>
+                    <div class="cards bg-danger ">
+                        <p class="card-text">title</p>
+                    </div>
+                    <div class="cards bg-danger ">
+                        <p class="card-text">title</p>
+                    </div>
+                   
                 
             </section>
         </main>
         <footer class="footer container d-flex justify-content-center mt-5">
-            <a href="index.html" class="one me-2 text-secondary link-info text-decoration-none">Digimovies™</a>
+            <a href="index.html" class="one me-2 text-secondary link-warning text-decoration-none">Digimovies™</a>
             <section class="two d-md-none d-xxl-flex d-xl-flex d-lg-flex d-sm-block ">©copyright . All Right Reserved</section>
         </footer>
 
     <script src="script.js"></script>
+    <script src="nav.js"></script>
 </body>
 </html>

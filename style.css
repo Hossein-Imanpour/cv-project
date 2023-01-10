@@ -10,7 +10,7 @@ body{
     cursor: url('asset`s/iamges/cursor.svg') , auto;
 }
 .mainNav{
-    position: sticky;
+    position: fixed;
     top: 0;
     right: 0;
     width: 100%;
@@ -39,7 +39,9 @@ height: 3px;
 margin: 6px 0;
 background-color: #fff;
 transition: ease-in-out .3s;
-
+}
+.bar{
+    z-index: 1111;
 }
 .burger.is-active::before{
     transform: rotate(-45deg) translate( -9px , 6px);
@@ -49,6 +51,7 @@ transition: ease-in-out .3s;
 }
 .burger.is-active::after{
     transform: rotate(45deg) translate(-6.5px , -4px);
+    
 }
 
 /* mobile-nav start */
@@ -60,7 +63,7 @@ transition: ease-in-out .3s;
     min-width: 100vh;
     display: block;
     z-index: 98;
-    background-color: rgba(32, 32, 32, 0.712);
+    background-color: rgb(32, 32, 32);
     padding-top: 2rem;
     padding-bottom: 2rem;
     transition: ease-in-out .3s;
@@ -99,30 +102,80 @@ transition: ease-in-out .3s;
     background-attachment: scroll;
     background-position: top center;
     background-repeat: no-repeat;
-    background-size: cover;
+    /* background-size: cover; */
     background-attachment: fixed;
     height: 70vh;
-    width: 100vw;
+    width: 100%;
     margin: auto;
     position: relative;
     opacity: 0.7;
 }
 
-/* main section */
+/* ============================== main section ====================== */
 .searchBox{
-    outline: none;
+    /* outline: none; */
     border: none;
 }
 .searchBox:focus{
     outline-color: blue;
 }
-
-
-
+.recent{
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 2rem;
+    position: relative;
+    color: aliceblue;
+    margin-top: 4rem;
+}
+.recent::before {
+    content: "";
+    display: block;
+    width: 100px;
+    height: 1px;
+    background: #ffffff;
+    left: 33.5%;
+    top: 50%;
+    position: absolute;
+}
+.recent::after{
+    content: "";
+    display: block;
+    width: 100px;
+    height: 1px;
+    background: #ffffff;
+    right: 33.5%;
+    top: 50%;
+    position: absolute;
+}
+/* ============================= card sections =================================== */
+.card-section{
+    justify-content: center;
+}
+.cards{
+    width: 250px;
+    height: 250px;
+    border-radius: 1rem;
+    position: relative;
+    margin: .3rem;
+}
+.card-text{
+    text-align: center;
+    justify-items: end;
+}
 
 /* ==================== media queries =========================== */
 
-@media only screen and (min-width : 580px ) {
+
+@media screen and (max-width:1324px ) {
+    .recent::after , .recent::before{
+        display: none;
+    }
+    .main-text{
+        display: none;
+        opacity: 0;
+    }
+}
+@media  screen and (min-width:580px ) {
     .main-text{
         display: none;
     }
@@ -130,3 +183,4 @@ transition: ease-in-out .3s;
         display: none;
     }
 }
+

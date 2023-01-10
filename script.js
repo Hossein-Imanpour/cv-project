@@ -1,13 +1,16 @@
-fetch('http://api.anidb.net:9001/httpapi?request=anime')
-.then(res => {
-    res.json()
-}).then(data => {
-    console.log(data);
-})
+const $ = document;
+const cardSection = document.querySelector(".card-section");
+// async function fetchData(){
+//     const res = await fetch('https://api.consumet.org/anime/gogoanime/recent-episodes')
+//     const data = await res.json()
+//     fetchRendering(data)
+// }
+// fetchData()
 
-const burger = document.querySelector(".burger")
-const mobileNav =document.querySelector('.mobile-nav') 
-burger.addEventListener('click', () => {
-    burger.classList.toggle('is-active')
-    mobileNav.classList.toggle('is-active')
-})
+// function fetchRendering(array){
+//     let data = array.results    
+//     // console.log(array.results);
+//     data.forEach(item => {
+//             console.log(item);
+//     });
+// }
