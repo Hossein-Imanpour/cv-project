@@ -91,7 +91,7 @@ transition: ease-in-out .3s;
 .main-text{
     position: absolute;
     top: 12rem;
-    left: 23rem;
+    left: 14%;
     letter-spacing: 1rem;
     font-size: 1.5rem;
     font-family: 'Moon Dance', cursive;
@@ -159,10 +159,39 @@ transition: ease-in-out .3s;
     margin: .3rem;
 }
 .card-text{
-    text-align: center;
-    justify-items: end;
-}
+    position: absolute;
+    bottom: 15%;
+    left: 10%;
+    right: 5%;
+    color: #000;
+    background-color: rgba(0, 255, 255, 0.658);
+    padding: .5rem;
+    border-radius: 1rem;
+    cursor: pointer;
+    text-decoration: none; 
+    justify-items: baseline;
+    z-index: 10;
+    opacity: 0;
 
+}
+.image{
+    width: 250px;
+    height: 250px;
+    border-radius: 1rem;
+    cursor: pointer;
+}
+.cards:hover {
+    background-color: rgba(255, 255, 255, 0.555);
+}
+.cards:hover .card-text{
+    opacity: 1;
+}
+.cards:hover  .image {
+    opacity: .2;
+
+    transition: ease-in-out .3s;
+}
+/* .cards:hover  */
 /* ==================== media queries =========================== */
 
 
