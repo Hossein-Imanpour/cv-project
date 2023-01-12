@@ -1,0 +1,48 @@
+.episode-img{
+    width: 350px;
+    height: 400px;
+    position: absolute;
+    border-radius: .5rem;
+    
+}
+
+ .box{
+   background-color: red;
+   display: flex;
+   justify-content: space-between;
+   position: relative;
+   margin-top: 8rem;
+}
+
+.div{
+    position: absolute;
+    margin-top: 8rem;
+    margin-left: 52rem;
+
+}
+.title{
+color: #fff;
+background-color: #000;
+margin-top: 12rem;
+position: absolute;
+padding: .5rem;
+left: 10%;
+top: 0;
+font-size: 1.1rem;
+font-family: 'Moon Dance', cursive;
+
+}
+.description{
+    position: absolute;
+    margin-top: 17rem;
+    max-width: 700px;
+    color: #fff;
+    top: 10%;
+    left: 1%;
+    font-family: 'Dancing Script', cursive;
+
+}
+
+@media screen and (min-width: 1215px){
+   
+} 

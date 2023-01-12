@@ -14,7 +14,7 @@ function fetchRendering(array){
             // console.log(item);
             const {title , image ,id , url } = item;
             // console.log(url);
-        const titleEpisode = $.createElement('a'); titleEpisode.classList.add('card-text'); titleEpisode.href = url;
+        const titleEpisode = $.createElement('a'); titleEpisode.classList.add('card-text'); titleEpisode.href = `/anime.html?animeId=${id}`;
         titleEpisode.textContent = title; 
         // ======
         const cards = $.createElement("div"); cards.classList.add('cards'); 

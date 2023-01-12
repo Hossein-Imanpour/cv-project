@@ -169,7 +169,6 @@ transition: ease-in-out .3s;
     border-radius: 1rem;
     cursor: pointer;
     text-decoration: none; 
-    justify-items: baseline;
     z-index: 10;
     opacity: 0;
 
@@ -178,7 +177,7 @@ transition: ease-in-out .3s;
     width: 250px;
     height: 250px;
     border-radius: 1rem;
-    cursor: pointer;
+    /* cursor: pointer; */
 }
 .cards:hover {
     background-color: rgba(255, 255, 255, 0.555);
