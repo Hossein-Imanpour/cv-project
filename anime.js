@@ -8,17 +8,27 @@ const dataFetch = async () =>{
     const data = await res.json()
     // renderFetch(data)
     console.log(data);
-    const {title, image , type , genres , description} = data;
+    const {title, image , type , genres , description , status} = data;
     // console.log(title);
     const box = $.querySelector(".box");
     let div = $.querySelector(".div");
-    let img = $.querySelector(".episode-img") ; img.src = image; 
+    let img = $.createElement("img") ; img.classList.add("episode-img") ;img.src = image; 
     let episodeTitle = $.querySelector(".title");
-    episodeTitle.textContent = title;
+    episodeTitle.textContent = `${title} : `;
     let EpisodeDescription = $.querySelector(".description");
     EpisodeDescription.textContent = description;
     div.append(img)
-    box.append(div)
+    let episodesGenres =  $.querySelector(".genres") ; episodesGenres.textContent = `genres :  ${genres}`;
+    let statusEpisode = $.querySelector(".status-Episode");
+    statusEpisode.textContent = ` status : ${status}`
+    // box.append(div)
 }
-dataFetch()
+document.addEventListener("DOMContentLoaded" , ()=> {
+    if(dataFetch()){
+
+    }else{
+        alert('Something Goes Wrong !!')
+    }
+    
+})
 
