@@ -8,7 +8,7 @@ const dataFetch = async () =>{
     const data = await res.json()
     // renderFetch(data)
     console.log(data);
-    const {title, image , type , genres , description , status} = data;
+    const {title, image , type , genres , description , status , episodes} = data;
     // console.log(title);
     const box = $.querySelector(".box");
     let div = $.querySelector(".div");
@@ -17,12 +17,39 @@ const dataFetch = async () =>{
     episodeTitle.textContent = `${title} : `;
     let EpisodeDescription = $.querySelector(".description");
     EpisodeDescription.textContent = description;
+    // if(description.length > ){
+
+    // }
     div.append(img)
     let episodesGenres =  $.querySelector(".genres") ; episodesGenres.textContent = `genres :  ${genres}`;
     let statusEpisode = $.querySelector(".status-Episode");
-    statusEpisode.textContent = ` status : ${status}`
+    statusEpisode.textContent = ` status : ${status}`;
+    let episodeUrl = $.querySelector(".bturl")
+    // episodeUrl.href = episodes
+    lengthEpisode(data)
     // box.append(div)
 }
+function lengthEpisode(detail){
+    // console.log(detail);
+    const {episodes , } = detail
+    console.log(episodes);
+    episodes.forEach(element => {
+        console.log(element);
+          let tr = $.createElement("tr"); tr.classList.add('trrTable');
+          let td = $.createElement("td") ; td.classList.add('tddTable');
+          let tdLink = $.createElement("td") ; tdLink.classList.add('tdLInk');
+          let a = $.createElement("a") ; a.classList.add("a-inside-tdLink");
+          a.href = element.url ; a.textContent = ' watch '; a.target = "_blank"
+          let tbody = $.querySelector(".tbody")
+          td.textContent = element.number ; 
+          tdLink.append(a)
+          tr.append(td)
+          tr.append(tdLink)
+          tbody.append(tr);
+    });
+}
+
+
 document.addEventListener("DOMContentLoaded" , ()=> {
     if(dataFetch()){
 

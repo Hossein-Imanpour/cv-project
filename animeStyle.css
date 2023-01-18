@@ -1,4 +1,7 @@
-body{
+/* body{
+    position: relative;
+} */
+.valed{
     position: relative;
 }
 /* .box{
@@ -13,6 +16,7 @@ body{
     height: 400px;
     /* position: absolute; */
     border-radius: .5rem;
+    z-index: 122;
 }
 
 
@@ -29,7 +33,7 @@ color: red;
 position: absolute;
 margin-top: 12rem;
 padding: .5rem;
-left: 10%;
+left: 5%;
 /* top: 20%; */
 font-size: 1.1rem;
 font-family: 'Moon Dance', cursive;
@@ -39,11 +43,12 @@ font-family: 'Moon Dance', cursive;
     position: absolute;
     margin-top: 17rem;
     max-width: 750px;
+    height: 500px;
     color: #fff;
     top: 4rem;
     left: 1rem;
     font-family: 'Dancing Script', cursive;
-
+    /* overflow: hidden; */
 }
 .genres{
     position: absolute;
@@ -60,7 +65,43 @@ font-family: 'Moon Dance', cursive;
     font-family: 'Dancing Script', cursive;
 
 }
+.episode-table{
+    position: absolute;
+    top: 37.5rem;
+    left: 20%;
+    width: 750px;
+}
+.trrTable{
+    background-color: #ccc;
+    text-align: center;
+}
+.tddTable{
+    background-color: #ccc;
+    text-align: center;
+    
+}
+.tdLInk{
+    background-color: #ccc;
+    text-align: center;
+
+}
+.a-inside-tdLink{
+    text-decoration: none;
+    color: #000;
+}
+.a-inside-tdLink:hover{
+    text-decoration: underline;
+    color: blue;
+}
 /* ============== media queries ================ */
 @media screen and (min-width: 1215px){
    
 } 
+
+
+
+.linked{
+    position: absolute;
+    top: 37rem;
+    left: 40rem;
+}
