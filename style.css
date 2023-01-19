@@ -190,6 +190,11 @@ transition: ease-in-out .3s;
 
     transition: ease-in-out .3s;
 }
+.mainImg{
+    border-radius: 2rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
 /* .cards:hover  */
 /* ==================== media queries =========================== */
 
