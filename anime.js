@@ -31,7 +31,7 @@ const dataFetch = async () =>{
 }
 function lengthEpisode(detail){
     // console.log(detail);
-    const {episodes , } = detail
+    const {episodes ,url ,id} = detail
     console.log(episodes);
     episodes.forEach(element => {
         console.log(element);
@@ -39,7 +39,7 @@ function lengthEpisode(detail){
           let td = $.createElement("td") ; td.classList.add('tddTable');
           let tdLink = $.createElement("td") ; tdLink.classList.add('tdLInk');
           let a = $.createElement("a") ; a.classList.add("a-inside-tdLink");
-          a.href = element.url ; a.textContent = ' watch '; a.target = "_blank"
+          a.href = `play.html?Id=${url}` ; a.textContent = ' watch '; a.target = '_blank'
           let tbody = $.querySelector(".tbody")
           td.textContent = element.number ; 
           tdLink.append(a)

@@ -1,6 +1,9 @@
 /* body{
     position: relative;
 } */
+.mainNav{
+    position: static;
+}
 .valed{
     position: relative;
 }
