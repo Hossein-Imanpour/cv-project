@@ -31,21 +31,25 @@ const dataFetch = async () =>{
 }
 function lengthEpisode(detail){
     // console.log(detail);
-    const {episodes ,url ,id} = detail
+    const {episodes  ,url} = detail
     console.log(episodes);
     episodes.forEach(element => {
-        console.log(element);
+        // console.log(element);
+        // console.log(episodes);
+        const id =element.id ;
           let tr = $.createElement("tr"); tr.classList.add('trrTable');
           let td = $.createElement("td") ; td.classList.add('tddTable');
           let tdLink = $.createElement("td") ; tdLink.classList.add('tdLInk');
           let a = $.createElement("a") ; a.classList.add("a-inside-tdLink");
-          a.href = `play.html?Id=${url}` ; a.textContent = ' watch '; a.target = '_blank'
+          a.href = `play.html?id=${id}` ; 
+          a.textContent = ' watch '; a.target = '_blank'
           let tbody = $.querySelector(".tbody")
           td.textContent = element.number ; 
           tdLink.append(a)
           tr.append(td)
           tr.append(tdLink)
           tbody.append(tr);
+        //   console.log(element.url);
     });
 }
 
